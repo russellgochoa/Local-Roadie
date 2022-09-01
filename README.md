@@ -34,7 +34,7 @@ With Local Roadie you can get your gear to the gig on time and in one piece for 
 
 ### **_Component Hierarchy Diagram:_**
 
-![CHD](https://i.imgur.com/K7UuYgO.png 'Component Hierachy Diagram')
+![CHD](https://i.imgur.com/nmPeSW2.png 'Component Hierachy Diagram')
 
 ### **_Entity Relationship Diagram:_**
 
