@@ -14,11 +14,26 @@ module.exports = (sequelize, DataTypes) => {
   }
   Vehicle.init(
     {
-      type: DataTypes.STRING,
-      make: DataTypes.STRING,
-      model: DataTypes.STRING,
-      capacity: DataTypes.STRING,
-      price: DataTypes.INTEGER
+      type: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      make: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      model: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      capacity: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      price: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      }
     },
     {
       sequelize,
