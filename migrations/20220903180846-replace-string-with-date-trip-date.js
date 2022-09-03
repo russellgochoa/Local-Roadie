@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.changeColumn('trips', 'date', {
-      type: Sequelize.DATE
+      type: Sequelize.STRING
     })
     /**
      * Add altering commands here.
@@ -15,7 +15,7 @@ module.exports = {
 
   down: (queryInterface, Sequelize) => {
     return queryInterface.changeColumn('trips', 'date', {
-      type: Sequelize.DATE
+      type: Sequelize.STRING
     })
     /**
      * Add reverting commands here.
