@@ -21,10 +21,24 @@ module.exports = {
         type: Sequelize.STRING
       },
       vehicleId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        field: 'vehicle_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'vehicles',
+          key: 'id'
+        }
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        field: 'user_id',
+        onDelete: 'CASCADE',
+        refereces: {
+          model: 'users',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
