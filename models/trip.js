@@ -9,8 +9,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Trip.belongsTo(models.User, { foreignKey: 'user_id' })
-      Trip.hasOne(models.Vehicle, { foreignKey: 'vehicle_id' })
+      Trip.belongsTo(models.User, {
+        foreignKey: 'user_id',
+        as: 'user_trip',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      })
+      Trip.hasOne(models.Vehicle, {
+        foreignKey: 'vehicle_id',
+        as: 'trip_vehicle',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      })
     }
   }
   Trip.init(
