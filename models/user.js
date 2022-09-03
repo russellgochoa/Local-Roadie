@@ -9,17 +9,40 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.hasOne(models.Trip, { foreignKey: 'trip_id' })
+      User.hasOne(models.Trip, {
+        foreignKey: 'trip_id',
+        as: 'user_trip',
+        onDelete: 'cascade',
+        onUpdate: 'cascade'
+      })
     }
   }
   User.init(
     {
-      firstName: DataTypes.STRING,
-      lastName: DataTypes.STRING,
-      username: DataTypes.STRING,
-      password: DataTypes.STRING,
-      email: DataTypes.STRING,
-      gear: DataTypes.TEXT
+      firstName: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      lastName: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      username: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      gear: {
+        type: DataTypes.TEXT,
+        allowNull: false
+      }
     },
     {
       sequelize,
