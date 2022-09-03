@@ -15,12 +15,42 @@ module.exports = (sequelize, DataTypes) => {
   }
   Trip.init(
     {
-      date: DataTypes.STRING,
-      pickupTime: DataTypes.INTEGER,
-      pickupLocation: DataTypes.STRING,
-      destination: DataTypes.STRING,
-      vehicleId: DataTypes.INTEGER,
-      userId: DataTypes.INTEGER
+      date: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      pickupTime: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      pickupLocation: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      destination: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      vehicleId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        field: 'vehicle_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'vehicles',
+          key: 'id'
+        }
+      },
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        field: 'user_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      }
     },
     {
       sequelize,
