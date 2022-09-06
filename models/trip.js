@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
       },
       pickupTime: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
       },
       pickupLocation: {

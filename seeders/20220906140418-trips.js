@@ -5,7 +5,7 @@ module.exports = {
     return queryInterface.bulkInsert('trips', [
       {
         date: '9/17/22',
-        pickupTime: 4,
+        pickupTime: '4:00pm',
         pickupLocation: '600 N Lamar, Austin, TX 78703',
         destination: '912 Red River St, Austin, TX 78701',
         vehicleId: vehicle.id,
