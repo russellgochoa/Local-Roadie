@@ -2,7 +2,18 @@
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    return queryInterface.bulkInsert('trips', [{}])
+    return queryInterface.bulkInsert('trips', [
+      {
+        date: '9/17/22',
+        pickupTime: 4,
+        pickupLocation: '600 N Lamar, Austin, TX 78703',
+        destination: '912 Red River St, Austin, TX 78701',
+        vehicleId: vehicle.id,
+        userId: user.id,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
+    ])
     /**
      * Add seed commands here.
      *
@@ -15,6 +26,7 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
+    return queryInterface.bulkDelete('trips', null, {})
     /**
      * Add commands to revert seed here.
      *
