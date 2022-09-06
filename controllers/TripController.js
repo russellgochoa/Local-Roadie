@@ -1,6 +1,7 @@
 const { Trip } = require('../models')
+const { Op, literal, fn, col } = require('sequelize')
 
-const GetALlTrips = async (req, res) => {
+const GetAllTrips = async (req, res) => {
   try {
     const trips = await Trip.findAll({})
     res.send(trips)
@@ -10,5 +11,5 @@ const GetALlTrips = async (req, res) => {
 }
 
 module.exports = {
-  GetALlTrips
+  GetAllTrips
 }

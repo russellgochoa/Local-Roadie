@@ -8,7 +8,7 @@ module.exports = {
         lastName: 'Ochoa',
         username: 'russgus',
         password: 'fxfxfxfx',
-        emai: 'russ@russ.com',
+        email: 'russ@russ.com',
         gear: 'Fender Deluxe Reverb, Epiphone Casino',
         createdAt: new Date(),
         updatedAt: new Date()
