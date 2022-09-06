@@ -10,7 +10,7 @@ module.exports = {
         make: 'Honda',
         model: 'Odyssey',
         capacity: '10 passenger',
-        price: 20,
+        price: '$20',
         tripId: trip.id,
         createdAt: new Date(),
         updatedAt: new Date()
