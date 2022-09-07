@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       User.hasOne(models.Trip, {
-        foreignKey: 'trip_id',
-        as: 'user_id',
+        foreignKey: 'tripId',
+        as: 'userId',
         onDelete: 'cascade',
         onUpdate: 'cascade'
       })
@@ -42,6 +42,16 @@ module.exports = (sequelize, DataTypes) => {
       gear: {
         type: DataTypes.TEXT,
         allowNull: false
+      },
+      tripId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        // field: 'trip_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'trips',
+          key: 'id'
+        }
       }
     },
     {
