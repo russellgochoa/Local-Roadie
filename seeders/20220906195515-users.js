@@ -12,6 +12,16 @@ module.exports = {
         gear: 'Fender Deluxe Reverb, Epiphone Casino',
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        firstName: 'Joe',
+        lastName: 'Strummer',
+        username: 'joestrum',
+        password: 'clclclcl',
+        email: 'joe@strum.com',
+        gear: 'Fender Super Reverb, Fender Telecaster',
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ])
     /**

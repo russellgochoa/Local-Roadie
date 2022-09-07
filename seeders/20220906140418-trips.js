@@ -13,6 +13,16 @@ module.exports = {
           userId: 1,
           createdAt: new Date(),
           updatedAt: new Date()
+        },
+        {
+          date: '9/20/22',
+          pickupTime: '7:00pm',
+          pickupLocation: '708 Patterson Ave, Austin, TX 78703',
+          destination: '4204 Menchaca Rd, Austin, TX 78704',
+          vehicleId: 2,
+          userId: 2,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ],
       {}

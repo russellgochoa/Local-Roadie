@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Vehicle.belongsTo(models.Trip, {
-        foreignKey: 'tripId',
+        foreignKey: 'vehicleId',
         onDelete: 'cascade',
         onUpdate: 'cascade'
       })

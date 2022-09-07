@@ -9,7 +9,7 @@ module.exports = {
       [
         {
           type: 'Sprinter Cargo Van',
-          make: 'MERCEDES-BENZ',
+          make: 'Mercedes-Benz',
           model: 'F2CA170',
           capacity: '530 cubic ft.',
           price: '$15',
