@@ -37,16 +37,6 @@ module.exports = (sequelize, DataTypes) => {
       price: {
         type: DataTypes.STRING,
         allowNull: false
-      },
-      vehicleId: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        // field: 'vehicle_id',
-        onDelete: 'CASCADE',
-        references: {
-          model: 'vehicles',
-          key: 'id'
-        }
       }
     },
     {
