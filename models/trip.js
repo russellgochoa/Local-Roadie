@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       vehicleId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
         // field: 'vehicle_id',
         onDelete: 'CASCADE',
         references: {
@@ -51,7 +51,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       userId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
         // field: 'user_id',
         onDelete: 'CASCADE',
         references: {

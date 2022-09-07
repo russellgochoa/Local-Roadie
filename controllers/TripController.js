@@ -25,9 +25,25 @@ const CreateTrip = async (req, res) => {
   } catch (error) {
     throw error
   }
+  // console.log('CreateTrip')
+}
+
+const UpdateTrip = async (req, res) => {
+  try {
+    let tripId = parseInt(req.params.trip_id)
+    let updatedTrip = await Trip.update(req.body, {
+      where: { id: tripId },
+      returning: true
+    })
+    res.send(updatedTrip)
+  } catch (error) {
+    throw error
+  }
+  // console.log('UpdateTrip')
 }
 
 module.exports = {
   GetAllTrips,
-  CreateTrip
+  CreateTrip,
+  UpdateTrip
 }
