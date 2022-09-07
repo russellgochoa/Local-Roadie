@@ -58,16 +58,6 @@ module.exports = (sequelize, DataTypes) => {
           model: 'users',
           key: 'id'
         }
-      },
-      tripId: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        // field: 'trip_id',
-        onDelete: 'CASCADE',
-        references: {
-          model: 'trips',
-          key: 'id'
-        }
       }
     },
     {

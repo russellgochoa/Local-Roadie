@@ -10,6 +10,24 @@ const GetAllTrips = async (req, res) => {
   }
 }
 
+const CreateTrip = async (req, res) => {
+  try {
+    let userId = parseInt(req.params.userId)
+    let tripId = parseInt(req.params.tripId)
+
+    let tripBody = {
+      userId,
+      tripId,
+      ...req.body
+    }
+    let trip = await Trip.create(tripBody)
+    res.send(trip)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
-  GetAllTrips
+  GetAllTrips,
+  CreateTrip
 }
