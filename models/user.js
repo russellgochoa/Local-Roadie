@@ -42,16 +42,6 @@ module.exports = (sequelize, DataTypes) => {
       gear: {
         type: DataTypes.TEXT,
         allowNull: false
-      },
-      tripId: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        // field: 'trip_id',
-        onDelete: 'CASCADE',
-        references: {
-          model: 'trips',
-          key: 'id'
-        }
       }
     },
     {
