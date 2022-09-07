@@ -9,6 +9,8 @@ module.exports = {
           pickupTime: '4:00pm',
           pickupLocation: '600 N Lamar, Austin, TX 78703',
           destination: '912 Red River St, Austin, TX 78701',
+          vehicleId: 1,
+          userId: 1,
           createdAt: new Date(),
           updatedAt: new Date()
         }

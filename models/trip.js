@@ -11,13 +11,11 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Trip.belongsTo(models.User, {
         foreignKey: 'user_id',
-        as: 'user_trip',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
       Trip.hasOne(models.Vehicle, {
         foreignKey: 'vehicle_id',
-        as: 'trip_vehicle',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
