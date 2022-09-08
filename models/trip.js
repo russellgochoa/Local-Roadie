@@ -10,12 +10,12 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Trip.belongsTo(models.User, {
-        foreignKey: 'userId',
+        foreignKey: 'user_id',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
       Trip.hasOne(models.Vehicle, {
-        foreignKey: 'vehicleId',
+        foreignKey: 'vehicle_id',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
@@ -41,8 +41,8 @@ module.exports = (sequelize, DataTypes) => {
       },
       vehicleId: {
         type: DataTypes.INTEGER,
-        allowNull: true,
-        // field: 'vehicle_id',
+        allowNull: false,
+        field: 'vehicle_id',
         onDelete: 'CASCADE',
         references: {
           model: 'vehicles',
@@ -51,8 +51,8 @@ module.exports = (sequelize, DataTypes) => {
       },
       userId: {
         type: DataTypes.INTEGER,
-        allowNull: true,
-        // field: 'user_id',
+        allowNull: false,
+        field: 'user_id',
         onDelete: 'CASCADE',
         references: {
           model: 'users',

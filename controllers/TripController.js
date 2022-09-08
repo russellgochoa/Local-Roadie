@@ -42,8 +42,19 @@ const UpdateTrip = async (req, res) => {
   // console.log('UpdateTrip')
 }
 
+const DeleteTrip = async (req, res) => {
+  try {
+    let tripId = parseInt(req.params.trip_id)
+    await Trip.destroy({ where: { id: tripId } })
+    res.send({ message: `Deleted trip with an id of ${tripId}` })
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   GetAllTrips,
   CreateTrip,
-  UpdateTrip
+  UpdateTrip,
+  DeleteTrip
 }
