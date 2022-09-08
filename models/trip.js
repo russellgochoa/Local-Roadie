@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
         onUpdate: 'CASCADE'
       })
       Trip.hasOne(models.Vehicle, {
-        foreignKey: 'vehicle_id',
+        foreignKey: 'trip_id',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
