@@ -39,6 +39,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false
       },
+      gear: {
+        type: DataTypes.TEXT,
+        allowNull: false
+      },
       vehicleId: {
         type: DataTypes.INTEGER,
         allowNull: false,

@@ -38,10 +38,6 @@ module.exports = (sequelize, DataTypes) => {
       email: {
         type: DataTypes.STRING,
         allowNull: false
-      },
-      gear: {
-        type: DataTypes.TEXT,
-        allowNull: false
       }
     },
     {

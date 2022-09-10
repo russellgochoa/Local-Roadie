@@ -9,7 +9,6 @@ module.exports = {
         username: 'russgus',
         password: 'fxfxfxfx',
         email: 'russ@russ.com',
-        gear: 'Fender Deluxe Reverb, Epiphone Casino',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -19,7 +18,6 @@ module.exports = {
         username: 'joestrum',
         password: 'clclclcl',
         email: 'joe@strum.com',
-        gear: 'Fender Super Reverb, Fender Telecaster',
         createdAt: new Date(),
         updatedAt: new Date()
       }
