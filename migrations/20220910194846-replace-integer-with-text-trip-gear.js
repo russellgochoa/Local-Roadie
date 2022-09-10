@@ -2,8 +2,8 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.removeColumn('users', 'gear', {
-      type: Sequelize.INTEGER
+    return queryInterface.changeColumn('trips', 'gear', {
+      type: Sequelize.TEXT
     })
     /**
      * Add altering commands here.
@@ -14,7 +14,9 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.addColumn('users', 'gear')
+    return queryInterface.changeColumn('trips', 'gear', {
+      type: Sequelize.TEXT
+    })
     /**
      * Add reverting commands here.
      *
