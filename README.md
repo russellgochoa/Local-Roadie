@@ -11,6 +11,8 @@
 
 ## **Resources**
 
+[Frontend Repo](https://github.com/russellgochoa/Local-Roadie-frontend)
+
 ---
 
 ## **_Description_**
